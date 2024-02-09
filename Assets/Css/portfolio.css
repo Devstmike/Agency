@@ -1,0 +1,91 @@
+.Allportfolio{
+    padding: var(--LR-sec-padding);
+    background-color: var(--black-color);
+}
+
+.Allportfolio .portfolio .wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Allportfolio .portfolio img{
+    object-fit: cover;
+    width: 600px;
+    height: 300px;
+    border: 5px solid rgb(223, 218, 218);
+    border-radius: 10px;
+    margin-right: 50px;
+}
+
+.Allportfolio .portfolio > h1{
+    text-align: center;
+    margin-bottom: 100px;
+    letter-spacing: 8px;
+    color: rgb(135, 131, 131);
+    font-size: 2rem;
+    font-family: 'Lato', sans-serif;
+    line-height: 50px;
+}
+
+
+.Allportfolio .portfolio .texts{
+    text-align: left;
+    color: rgb(223, 218, 218);
+}
+
+.Allportfolio .portfolio .texts h2{
+    margin-bottom: 10px;
+    font-size: 2rem;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 2px;
+}
+
+.Allportfolio .portfolio p{
+    text-align: justify;
+    font-family: 'Inter', sans-serif;
+}
+
+.Allportfolio .portfolio{
+    border-bottom: 1px solid var(--brown-color);
+    padding-bottom: 100px;
+    margin-bottom: 100px;
+}
+
+.Allportfolio .portfolio a {
+    color: white;
+    border: 1px solid white;
+    background-color: transparent;
+    margin-top: 10px;
+    padding: 5px 20px;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    transition:  5s;
+    display: inline-block;
+}
+
+.Allportfolio .portfolio a:hover {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 992px) {
+    
+    .Allportfolio .portfolio .wrapper{
+        flex-direction: column;
+    }
+
+    .Allportfolio .portfolio img{
+        margin-right: 0;
+    }
+    
+    .Allportfolio .portfolio img{
+        width: 100%;
+    }
+
+    .Allportfolio .portfolio .texts{    
+        width: 100%;
+     }
+}

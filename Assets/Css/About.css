@@ -1,0 +1,29 @@
+.hero-About-Page{
+    padding: var(--header-TB-sec-padding) var(--LR-sec-padding);
+}
+
+.hero-About-Page .images img{
+    border-radius: 50%;
+}
+
+.hero-About-Page .gridContainer{
+    display: grid;
+    /* grid-template-columns: repeat(1, 1fr); */
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.hero-About-Page .images{
+    margin-top: 100px;
+    text-align: center;
+}
+
+.hero-About-Page .images > h1{
+    font-display: var();
+    border-bottom:  1px solid rgb(228, 220, 220);
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+
