@@ -188,6 +188,7 @@ footer i:hover{
 .EntranceAnimation h3{
     font-size: 3rem;
     position: fixed;
+    text-align:center;
     top: 50%;
     z-index: 201;
     color: var(--black-color);
