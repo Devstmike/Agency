@@ -341,7 +341,10 @@ header i.fa-xmark{
     :root{
         --LR-sec-padding : 20px
         }
-    
+
+      header > a h1{
+            font-size: 1.2rem;
+        }
     .allTestimonials .flexWrapper{
         grid-template-columns: repeat(1, 1fr);
     }
