@@ -1,3 +1,12 @@
+:root{
+    --font-Montserrat: 'Montserrat', sans-serif;
+    --font-Nunito: 'Nunito Sans', sans-serif;
+    --font-OpenSans: 'Open Sans', sans-serif;
+    --font-Oswald: 'Oswald', sans-serif;
+    --font-Roboto: 'Roboto', sans-serif;
+}
+
+
 .Allportfolio{
     padding: var(--LR-sec-padding);
     background-color: var(--black-color);
@@ -26,6 +35,7 @@
     font-size: 2rem;
     font-family: 'Lato', sans-serif;
     line-height: 50px;
+
 }
 
 
@@ -39,14 +49,18 @@
     font-size: 2rem;
     font-family: 'Lato', sans-serif;
     letter-spacing: 2px;
+    
 }
 
 .Allportfolio .portfolio p{
     text-align: justify;
     font-family: 'Inter', sans-serif;
+    font-family: var(--font-Nunito);
+    font-weight: 100;
+
 }
 
-.Allportfolio .portfolio{
+.Allportfolio .portfolio:not(.Allportfolio > .portfolio:last-child){
     border-bottom: 1px solid var(--brown-color);
     padding-bottom: 100px;
     margin-bottom: 100px;
@@ -54,20 +68,22 @@
 
 .Allportfolio .portfolio a {
     color: white;
-    border: 1px solid white;
+    border: 1px solid var(--deep-brown);
     background-color: transparent;
     margin-top: 10px;
     padding: 5px 20px;
     border-radius: 10px;
     font-family: 'Inter', sans-serif;
-    transition:  5s;
+    transition:  2s;
     display: inline-block;
+
 }
 
 .Allportfolio .portfolio a:hover {
-    background-color: white;
-    color: black;
+    /* background-color: rgba(222, 216, 216, 0.2); */
+    /* color: black; */
     font-weight: bold;
+    box-shadow: 1px 1px 10px white;
 }
 
 
@@ -88,4 +104,13 @@
     .Allportfolio .portfolio .texts{    
         width: 100%;
      }
+}
+
+
+
+@media screen and (max-width: 992px) {
+    .Allportfolio .portfolio h2{
+        margin-bottom: 20px !important;
+    }
+    
 }

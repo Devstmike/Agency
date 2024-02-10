@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,500;1,200&family=Nunito+Sans:opsz,wght@6..12,300;6..12,500&family=Open+Sans:wght@300;400;500;600;700&family=Oswald:wght@300;400;600;700&family=Roboto:wght@100;300;500&display=swap');
+
+
+
 *{
     padding: 0;
     margin: 0;
@@ -10,6 +14,9 @@
 
 body{
     min-height: 100vh;
+    /* background-color: var(--black-color); */
+    min-height: 100vh;
+    font-family: var(--font-Montserrat);
 }
 
 :root{
@@ -21,6 +28,11 @@ body{
     --brown-color : rgb(223, 218, 218);
     --border-color : rgb(39, 38, 38);
     --deep-brown : #5d5c5b;
+    --font-Montserrat: 'Montserrat', sans-serif;
+    --font-Nunito: 'Nunito Sans', sans-serif;
+    --font-OpenSans: 'Open Sans', sans-serif;
+    --font-Oswald: 'Oswald', sans-serif;
+    --font-Roboto: 'Roboto', sans-serif;
 }
 
 .ReuseFlex{
@@ -37,6 +49,7 @@ header{
     top: 0;
     border-bottom: 1px solid  var(--border-color) ;
     z-index: 100;
+    font-family: var(--font-Montserrat);
 }
 
 
@@ -98,6 +111,7 @@ html{
     color: var(--white-color);
     padding: 100px var(--LR-sec-padding)  0;
     text-align: center;
+
 }
 
 .hero > h1{
@@ -119,6 +133,7 @@ header i.fa-bars{
     color: white !important;
     font-size: 2rem;
 }
+
 
 footer {
     padding: calc(var(--header-TB-sec-padding) * 2) var(--LR-sec-padding);
@@ -167,7 +182,7 @@ footer i:hover{
     align-items: center;
     flex-direction: column;
     /* delete */
-/*     display: none; */
+    display: none;
 }
 
 .EntranceAnimation h3{
@@ -183,8 +198,10 @@ footer i:hover{
     z-index: 200;
     width: 100%;
     height: 100%;
+    animation: changeColors 3s;
     
 }
+
 
 .ExitAnimation div{
     animation: goup 1s  reverse forwards;
@@ -218,7 +235,7 @@ footer i:hover{
 
 .OurServices .item{
     border: 1px solid var(--border-color);
-    padding: 30px;
+    padding: 40px 30px;
 }
 
 .OurServices .item > p:last-child{
@@ -234,7 +251,10 @@ footer i:hover{
 }
 
 .OurServices .item h4{
-    margin: 15px 0;
+    margin: 25px 0;
+    font-family: var(--font-Nunito);
+    color: var(--deep-brown);
+  
 }
 
 /* @import url("style.css"); */
@@ -253,14 +273,14 @@ footer i:hover{
     color: white;
     text-align: center;
     padding-top: 50px;
-    font-family: 'Open Sans', sans-serif;
-    letter-spacing: 8px;
+     letter-spacing: 8px;
 }
 
 .allTestimonials .wrap{
     display: flex;
     justify-content: start;
     align-items: center;
+    /* font-family: var(font); */
 }
 
 .allTestimonials .flexWrapper{
@@ -289,6 +309,19 @@ footer i:hover{
     margin: 10px 0;
 }
 
+
+header i.fa-xmark{
+    display: none;
+}
+
+.showMe{
+    display: block !important;
+}
+
+.hideMe{
+    display: none !important;
+}
+
 @media screen and (max-width: 992px){
     
     .allTestimonials .flexWrapper{
@@ -303,11 +336,32 @@ footer i:hover{
 
 
 @media screen and (max-width: 768px){
+
+    :root{
+        --LR-sec-padding : 20px
+        }
     
     .allTestimonials .flexWrapper{
         grid-template-columns: repeat(1, 1fr);
     }
 
+    .hero .texts{
+        text-align: justify;
+    }
+
+    .OurServices{
+        padding-top: 150px;
+    }
+
+    .OurServices > h3{
+        font-size: 1.9rem;
+        line-height: 50px;
+    }
+
+    .allTestimonials >h1{
+        padding-bottom: 20px;
+    }
+    
 }
 
 
@@ -394,6 +448,7 @@ footer i:hover{
 }
 
 
+
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 992px) {
 
@@ -401,11 +456,13 @@ footer i:hover{
         position: fixed;
         right: 0;
         top: 0;
+        /* delete */
         display: none;
         background-color: rgba(16, 16, 16, 0.902);
         width: 50%;
         height: 100%;
         padding: 40px 0 0 20px;
+        animation: myOpacity 0.5s;
     }
 
     header ul li{
@@ -455,3 +512,10 @@ footer i:hover{
     /* height: 100%; */
     /* max-width: 100%; */
 /* } */ 
+
+
+footer + #text{
+    margin-bottom: 0 !important;
+    background-color: red;
+}
+

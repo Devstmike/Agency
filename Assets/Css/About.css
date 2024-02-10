@@ -1,5 +1,5 @@
 .hero-About-Page{
-    padding: var(--header-TB-sec-padding) var(--LR-sec-padding);
+    padding: var(--header-TB-sec-padding) var(--LR-sec-padding)  100px;
 }
 
 .hero-About-Page .images img{
@@ -27,3 +27,25 @@
 }
 
 
+.hero-About-Page .texts p{
+    margin-top: 50px;
+    text-align: justify;
+    font-family: var(--font-OpenSans);
+}
+
+.hero-About-Page .texts h1{
+    font-size: 2rem;
+    line-height: 50px;
+}
+
+.hero-About-Page .images .members p{
+    margin: 20px 0;
+    font-family: var(--font-OpenSans);
+}
+
+
+
+@media screen and (max-width: 768px){
+
+
+}

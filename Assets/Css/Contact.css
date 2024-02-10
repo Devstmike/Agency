@@ -17,7 +17,8 @@ form{
 .hero-Contact-Page {
     display: flex;
     /* justify-content: space-between; */
-    padding: var(--header-TB-sec-padding) var(--LR-sec-padding);
+    padding: 100px var(--LR-sec-padding);
+    align-items: start;
 }
 
 .hero-Contact-Page > *{
@@ -27,7 +28,7 @@ form{
 
 
 .hero-Contact-Page form > div{
-    margin-bottom: 20px;
+    /* margin: 20px 0; */
     /* border-bottom: 10px solid   ; */
 }
 
@@ -42,6 +43,9 @@ form{
 .hero-Contact-Page form input[type="submit"]{
     background-color: black;
     color: white;
+    padding: 20px 0 !important; 
+    letter-spacing: 2px;
+    font-family: var(--font-Montserrat);
 }
 
 .hero-Contact-Page > *:first-child{
@@ -52,7 +56,19 @@ form{
     /* background-color: red; */
 }
 
-@media screen and (max-width:992px) {
+.hero-Contact-Page .address > p:first-child{
+    margin-bottom: 20px;
+}
+
+.hero-Contact-Page form > div{
+    margin-bottom: 20px;
+}
+
+
+.hero-Contact-Page form > div label{
+    margin-bottom: 10px;
+}
+@media screen and (max-width:768px) {
     
     .hero-Contact-Page{
         flex-wrap: wrap;
@@ -61,5 +77,10 @@ form{
     .hero-Contact-Page > *:first-child{
         margin-right: 0;
     }
+
+
+     .hero-Contact-Page .address{
+        margin-top: 100px;
+     }
     
 }

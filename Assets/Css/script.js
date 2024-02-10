@@ -15,3 +15,21 @@ setTimeout(() => {
         heroText.classList.add("animate__zoomIn")
     }, 1000);
 }, 2000);
+
+
+let MenuIcon = document.querySelector("header i.fa-bars");
+let cancelIcon = document.querySelector("header i.fa-xmark");
+let navBar = document.querySelector("header nav");
+
+MenuIcon.onclick = () => {
+    navBar.classList.add("showMe")
+    MenuIcon.classList.add("hideMe")
+    cancelIcon.classList.add("showMe");
+}
+
+
+cancelIcon.onclick = () => {
+    navBar.classList.remove("showMe")
+    MenuIcon.classList.remove("hideMe")
+    cancelIcon.classList.remove("showMe");
+}
