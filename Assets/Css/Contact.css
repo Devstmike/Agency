@@ -19,6 +19,7 @@ form{
     /* justify-content: space-between; */
     padding: 100px var(--LR-sec-padding);
     align-items: start;
+    min-height: 80vh;
 }
 
 .hero-Contact-Page > *{
