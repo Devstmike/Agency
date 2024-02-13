@@ -77,13 +77,13 @@ function SendData() {
     formEle.reset()
 
     let thankyou =  `<div class="thanks" style="text-align:center">
-         <p style="Color:green">
+         <p style="Color:green;font-size:2rem;margin-bottom:10px">
              Thank You!
          </p>
          <p>
              Your Message has been Sent.
         </p>
      </div>`;
-     document.querySelector("form").innerHTML = thankyou
+     document.querySelector(".hero-Contact-Page").innerHTML = thankyou
  }
  
