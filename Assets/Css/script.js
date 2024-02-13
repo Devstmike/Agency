@@ -75,15 +75,16 @@ function SendData() {
      });
 
     formEle.reset()
-
+    
     let thankyou =  `<div class="thanks" style="text-align:center">
          <p style="Color:green;font-size:2rem;margin-bottom:10px">
              Thank You!
          </p>
-         <p>
+         <p style="font-size:2rem;">
              Your Message has been Sent.
         </p>
      </div>`;
      document.querySelector(".hero-Contact-Page").innerHTML = thankyou
+     window.scrollTo(0, 0);
  }
  
