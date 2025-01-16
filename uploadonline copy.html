@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+<style>
+    
+
+    body{
+        overflow: hidden;
+        
+    }
+    
+    model-viewer{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        height: 600px;
+        /* z-index: -1; */
+    }
+
+    
+    .hideMe{
+        /* display: none !important; */
+        opacity: 0;
+    }
+
+    </style>
+
+
+    
+</head>
+<body>
+    
+
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<div class="wrap" >
+    
+    <model-viewer disable-zoom style="width:100%"   src="https://devstmike.github.io/Agency/Assets/img/Maxwell.glb" alt="A 3D model" rotation-per-second="1rad" camera-orbit="20deg 0 0" disable-tap disable-zoom  auto-rotate camera-controls></model-viewer>
+    <model-viewer disable-zoom style="width:100%" class="hideMe" src="https://devstmike.github.io/Agency/Assets/img/Maxwell.glb" alt="A 3D model"  rotation-per-second="5.5rad" auto-rotate camera-controls></model-viewer>
+    <model-viewer disable-zoom style="width:100%" class="hideMe" src="https://devstmike.github.io/Agency/Assets/img/Maxwell.glb" alt="A 3D model"  rotation-per-second="10.5rad" auto-rotate camera-controls></model-viewer>
+    <model-viewer disable-zoom style="width:100%" class="hideMe" src="https://devstmike.github.io/Agency/Assets/img/Maxwell.glb" alt="A 3D model"  rotation-per-second="15.5rad" auto-rotate camera-controls></model-viewer>
+    <model-viewer disable-zoom style="width:100%" class="hideMe" src="https://devstmike.github.io/Agency/Assets/img/Maxwell.glb" alt="A 3D model"  rotation-per-second="20.5rad" auto-rotate camera-controls></model-viewer>
+    <model-viewer disable-zoom style="width:100%" class="hideMe" src="https://devstmike.github.io/Agency/Assets/img/Maxwell.glb" alt="A 3D model"  rotation-per-second="30.5rad" auto-rotate camera-controls></model-viewer>
+    <model-viewer disable-zoom style="width:100%" class="hideMe" src="https://devstmike.github.io/Agency/Assets/img/Maxwell.glb" alt="A 3D model"  rotation-per-second="40.5rad" auto-rotate camera-controls></model-viewer>
+</div>
+
+<script>    
+        
+        let currentValue = 0
+        let doc
+        let wrap = document.querySelector(".see")
+        let ani = document.querySelectorAll('model-viewer');
+        
+        ani.forEach( cur => {
+                cur.onclick = () => {
+                currentValue++
+                console.log(currentValue)
+            //    ani.setAttribute('rotation-per-second', `${currentValue}rad`);
+            //    console.log('clicked')
+            let ani = document.querySelectorAll('model-viewer');
+            ani.forEach( (an, index3) => {
+                    an.classList.add("hideMe")
+            })
+            switch (currentValue) {
+                case 1:
+                    currentImage(1)
+                    break;
+                case 2:
+                    currentImage(2)
+                    break;
+                case 3:
+                    currentImage(3)
+                    break;
+                case 4:
+                    currentImage(4)
+                    break;
+                case 5:
+                    currentImage(5)
+                    break;
+                case 6:
+                    currentImage(6)
+                    break;
+                case 7:
+                    currentImage(7)
+                    break;
+            
+                default:
+                    currentImage(4)
+            }
+
+
+            }
+
+           
+            console.log('cv = ' + currentValue)
+        }) 
+
+
+        function currentImage(index){
+            let arrRad = [1,5.5,10.5,15.5,20.5,30.5,40.5]
+
+            try {
+                if(currentValue == 6){
+                    currentValue = 1
+                    index = 1
+                    ani[index].classList.remove("hideMe");
+                    setTimeout(() => {
+                        ani[index].setAttribute("rotation-per-second","0rad")
+                    }, 5000);
+
+                    ani.forEach( (an, index3) => {
+                        if(index != index3 || index != index3 + 1){
+                            ani[index3].setAttribute("rotation-per-second",`${arrRad[index3]}rad`)
+                        }
+                    })                    
+                }else{
+                    ani[index].classList.remove("hideMe");
+                    setTimeout(() => {
+                        ani[index].setAttribute("rotation-per-second","0rad")
+                    }, 5000);
+
+                    ani.forEach( (an, index3) => {
+                        if(index != index3 || index != index3 + 1){
+                            ani[index3].setAttribute("rotation-per-second",`${arrRad[index3]}rad`)
+                        }
+                    })                                    
+                }
+            } catch (error) {
+                
+            }
+        }
+      
+
+    //   fetch("https://www.tiktok.com/@funny_emma_01").then(res => res.text()).then( e => console.log(e))
+</script>
+</html>
